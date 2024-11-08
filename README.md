@@ -78,13 +78,12 @@ git push
 
 # 2. Run translation and rotations on FD n-tuples
 
- The produced FD n-tuples  will be used as input files for the following program to run.  
+ The produced FD n-tuples  will be used as input files for the following program to run. [First time only]
  
  Input: " $\color{#FF0000}{myntuple.root}$"
  
  Output: " $\color{#FF0000}{Output \textunderscore FDGeoEff.root}$ "    .
 
-[First time only]
 ```
 cd /dune/app/users/<your_username>
 mkdir NDEff (first time only)

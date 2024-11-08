@@ -109,10 +109,9 @@ make runGeoEffFDEvtSim
 To (re)run program,
 ```
 cd ../bin
-# Usage: ./runGeoEffFDEvtSim inputFDntuple
 ./runGeoEffFDEvtSim /dune/app/users/janelly/FDEff/srcs/myntuples/myntuples/MyEnergyAnalysis/myntuple.root
 ```
-this will produce a root file containing throws and the hadron throw result.
+This will produce a root file containing throws and the hadron throw result.
 
 If the source files in src are changed, recompile:
 

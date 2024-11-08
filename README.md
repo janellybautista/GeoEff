@@ -1,10 +1,5 @@
-# Produce Ntuple from DUNE FD MC files 
 
-The following instruction is used to produce ROOT n-tuples from FD MC CAF files (mcc11): [FD Beamsim Requests](https://dune-data.fnal.gov/mc/mcc11/index.html). 
-
-Output: " $\color{#FF0000}{myntuple.root}$ ". 
-
-## 1. Log in & DUNE FNAL machines (dunegpvm*) environment setup:
+### Log in & DUNE FNAL machines (dunegpvm*) environment setup:
 ```
 kfnal                                      # Short for kinit -f <username>@FNAL.GOV. 
 ssh -X janelly@dunegpvm01.fnal.gov      
@@ -20,6 +15,11 @@ ssh -Y -L 5901:localhost:5901 janelly@dunegpvm01.fnal.gov
 -B /cvmfs,/exp,/nashome,/pnfs/dune,/opt,/run/user,/etc/hostname,/etc/hosts,/etc/krb5.conf --ipc --pid \
 /cvmfs/singularity.opensciencegrid.org/fermilab/fnal-dev-sl7:latest
 ```
+# Produce Ntuple from DUNE FD MC files 
+
+The following instruction is used to produce ROOT n-tuples from FD MC CAF files (mcc11): [FD Beamsim Requests](https://dune-data.fnal.gov/mc/mcc11/index.html). 
+
+Output: " $\color{#FF0000}{myntuple.root}$ ". 
 
 ### First time environment setup only
 
@@ -56,7 +56,7 @@ lar -c MyEnergyAnalysis.fcl -n -1                                       # Obtain
 # 10k evts take about 32 minutes
 ```
 
-## 2. Enviroment setup when loging back
+### Enviroment setup when loging back
 
 ```
 source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
@@ -76,7 +76,7 @@ git push
 ```
 
 
-# Instruction for running translation and rotations on FD n-tuples
+# Run translation and rotations on FD n-tuples
 
 Prerequisite: [Produce Ntuple from DUNE FD MC files](https://github.com/weishi10141993/myntuples#produce-ntuple-from-dune-fd-mc-files). The produced FD n-tuples will be used as input files for the following program to run.
 

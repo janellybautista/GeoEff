@@ -123,7 +123,7 @@ source setup.sh
 cmake -DPYTHON_EXECUTABLE:FILEPATH=`which python` .
 make -j geoEff    
 ```
-## Calculate FD event efficiency 
+#### Calculate FD event efficiency 
 
 The output root file from running ```runGeoEffFDEvtSim``` can be used to calculate FD event hadron containment efficiency by running:
 
@@ -137,28 +137,29 @@ root -l -b -q FDEffCalc.C
 
 The output root file from running ```runGeoEffFDEvtSim``` can also be used for lepton NN training.
 
-## Event displays (This is actually the Rea ) 
+#### Event displays (This is actually the Hadron Hits ) 
 
 The hadronic hits can be plotted in 2D event displays at FD via:
 ```
 echo 'gROOT->ProcessLine(".L ReadHadronHitNtuple.cpp"); ReadHadronHitNtuple_FD()'| root -l -b
 ```
 
-## Run on Grid
+## Run on Grid (Exit the Aptainer)
 
 First get the work env setup:
 ```
-cd /dune/app/users/weishi
+cd /dune/app/users/janelly
 wget https://raw.githubusercontent.com/weishi10141993/NeutrinoPhysics/main/setupNDEff-grid.sh --no-check-certificate
 ```
 
 Suppose the input FD ntuples are in this directory,
 ```
-/pnfs/dune/scratch/users/weishi/myFDntuples
+/pnfs/dune/persistent/users/flynnguo/myFDntuples/myntuple_53993115     #Look in myFDntuples for a root file: One of the files from myntuple_53993115: myntuple_53993115_999.root
 ```
-write the list to txt file,
+write the list to txt file, 
 ```
-ls -d "/pnfs/dune/scratch/users/weishi/myFDntuples"/* | sed "s\/pnfs\root://fndca1.fnal.gov:1094/pnfs/fnal.gov/usr\g" > myFDntuples.txt
+ls -d "/pnfs/dune/scratch/users/weishi/myFDntuples/myntuple_53993115"/* | sed "s\/pnfs\root://fndca1.fnal.gov:1094/pnfs/fnal.gov/usr\g" > myFDntuples.txt
+ls -d "/pnfs/dune/scratch/users/weishi/myFDntuples/myntuple_53993115/myntuple_53993115_999.root" | sed "s\/pnfs\root://fndca1.fnal.gov:1094/pnfs/fnal.gov/usr\g" > myFDntuples.txt
 # it also changes pnfs to xrootd so that worker node can access
 ```
 which is going to be sent to the grid in a tarball below.

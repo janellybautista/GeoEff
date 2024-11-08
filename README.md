@@ -15,7 +15,7 @@ ssh -Y -L 5901:localhost:5901 janelly@dunegpvm01.fnal.gov
 -B /cvmfs,/exp,/nashome,/pnfs/dune,/opt,/run/user,/etc/hostname,/etc/hosts,/etc/krb5.conf --ipc --pid \
 /cvmfs/singularity.opensciencegrid.org/fermilab/fnal-dev-sl7:latest
 ```
-# Produce Ntuple from DUNE FD MC files 
+# 1. Produce Ntuple from DUNE FD MC files 
 
 The following instruction is used to produce ROOT n-tuples from FD MC CAF files (mcc11): [FD Beamsim Requests](https://dune-data.fnal.gov/mc/mcc11/index.html). 
 
@@ -76,9 +76,9 @@ git push
 ```
 
 
-# Run translation and rotations on FD n-tuples
+# 2. Run translation and rotations on FD n-tuples
 
-Prerequisite: [Produce Ntuple from DUNE FD MC files](https://github.com/weishi10141993/myntuples#produce-ntuple-from-dune-fd-mc-files). The produced FD n-tuples will be used as input files for the following program to run.
+ The produced FD n-tuples (Input: " $\color{#FF0000}{myntuple.root}$")  will be used as input files for the following program to run.  Output: " $\color{#FF0000}{Output_FDGeoEff.root}$ ".
 
 [First time only]
 ```
@@ -111,7 +111,7 @@ To (re)run program,
 cd ../bin
 ./runGeoEffFDEvtSim /dune/app/users/janelly/FDEff/srcs/myntuples/myntuples/MyEnergyAnalysis/myntuple.root
 ```
-This will produce a root file containing throws and the hadron throw result.
+This will produce a root output file containing throws and the hadron throw result: " $\color{#FF0000}{Output_FDGeoEff.root}$ ".
 
 If the source files in src are changed, recompile:
 
@@ -120,7 +120,7 @@ source setup.sh
 cmake -DPYTHON_EXECUTABLE:FILEPATH=`which python` .
 make -j geoEff    
 ```
-## Instruction for calculate FD event efficiency
+## Calculate FD event efficiency 
 
 The output root file from running ```runGeoEffFDEvtSim``` can be used to calculate FD event hadron containment efficiency by running:
 
@@ -134,7 +134,7 @@ root -l -b -q FDEffCalc.C
 
 The output root file from running ```runGeoEffFDEvtSim``` can also be used for lepton NN training.
 
-## Event displays
+## Event displays (This is actually the Rea ) 
 
 The hadronic hits can be plotted in 2D event displays at FD via:
 ```

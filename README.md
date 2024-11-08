@@ -80,7 +80,7 @@ git push
 
  The produced FD n-tuples  will be used as input files for the following program to run.  
  Input: " $\color{#FF0000}{myntuple.root}$"
- Output: " $\color{#FF0000}{Output_FDGeoEff.root}$ ".
+ Output: " $\color{#FF0000}{Output}$ " " $\color{#FF0000}{_}$ " " $\color{#FF0000}{FDGeoEff.root}$ "    .
 
 [First time only]
 ```

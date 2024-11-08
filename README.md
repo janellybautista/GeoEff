@@ -79,6 +79,7 @@ git push
 # 2. Run translation and rotations on FD n-tuples
 
  The produced FD n-tuples  will be used as input files for the following program to run.  
+ 
  Input: " $\color{#FF0000}{myntuple.root}$"
  Output: " $\color{#FF0000}{Output _ FDGeoEff.root}$ "    .
 
@@ -113,7 +114,7 @@ To (re)run program,
 cd ../bin
 ./runGeoEffFDEvtSim /dune/app/users/janelly/FDEff/srcs/myntuples/myntuples/MyEnergyAnalysis/myntuple.root
 ```
-This will produce a root output file containing throws and the hadron throw result. ($\color{#FF0000}{Output~file}$ " $\color{#FF0000}{Output _ FDGeoEff.root}$ ")
+This will produce a root output file containing throws and the hadron throw result. ($\color{#FF0000}{Output~file}$ : $\color{#FF0000}{Output "_" FDGeoEff.root}$ ")
 
 If the source files in src are changed, recompile:
 

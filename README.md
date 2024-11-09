@@ -98,10 +98,7 @@ make -j geoEff                                                                  
 
 To (re)compile
 ```
-cd /dune/app/users/<your_username>/NDEff/DUNE_ND_GeoEff/
-#
-# In case you log out, need to source setup.sh to setup ROOT
-#
+cd /dune/app/users/<your_username>/NDEff/DUNE_ND_GeoEff/    # In case you log out, need to source setup.sh to setup ROOT
 source setup.sh         
 
 # Compile program
@@ -123,7 +120,7 @@ source setup.sh
 cmake -DPYTHON_EXECUTABLE:FILEPATH=`which python` .
 make -j geoEff    
 ```
-#### Calculate FD event efficiency 
+### Calculate FD event efficiency 
 
 The output root file from running ```runGeoEffFDEvtSim``` can be used to calculate FD event hadron containment efficiency by running:
 
@@ -137,7 +134,7 @@ root -l -b -q FDEffCalc.C
 
 The output root file from running ```runGeoEffFDEvtSim``` can also be used for lepton NN training.
 
-#### Event displays (This is actually the Hadron Hits ) 
+### Event displays (This is actually the Hadron Hits) 
 
 The hadronic hits can be plotted in 2D event displays at FD via:
 ```

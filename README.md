@@ -63,7 +63,7 @@ source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
 setup dunetpc v09_22_02 -q e19:debug
 source /dune/app/users/$USER/FDEff/localProducts_larsoft_v09_22_02_debug_e19/setup
 mrbsetenv
-cd /dune/app/users/$USER/FDEff/srcs/myntuples/myntuples/MyEnergyAnalysis
+cd /exp/dune/app/users/$USER/FDEff/srcs/myntuples/myntuples/MyEnergyAnalysis
 ```
 
 If added new package in ```srcs``` directory, do ```mrb uc``` and then recompile as above.

@@ -98,7 +98,7 @@ make -j geoEff                                                                  
 
 To (re)compile
 ```
-cd /dune/app/users/<your_username>/NDEff/DUNE_ND_GeoEff/    # In case you log out, need to source setup.sh to setup ROOT
+cd /dune/app/users/janelly/NDEff/DUNE_ND_GeoEff/    # In case you log out, need to source setup.sh to setup ROOT
 source setup.sh         
 
 # Compile program
@@ -109,7 +109,7 @@ make runGeoEffFDEvtSim
 To (re)run program,
 ```
 cd ../bin
-./runGeoEffFDEvtSim /dune/app/users/janelly/FDEff/srcs/myntuples/myntuples/MyEnergyAnalysis/myntuple.root
+./runGeoEffFDEvtSim /exp/dune/app/users/janelly/FDEff/srcs/myntuples/myntuples/MyEnergyAnalysis/myntuple.root
 ```
 This will produce a root output file containing throws and the hadron throw result. ($\color{#FF0000}{Output~file}$ : $\color{#FF0000}{Output \textunderscore FDGeoEff.root}$ ")
 

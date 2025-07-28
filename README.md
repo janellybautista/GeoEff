@@ -26,7 +26,7 @@ Output: " $\color{#FF0000}{myntuple.root}$ ".
 
 
 ```
-cd /dune/app/users/$USER                                               
+cd /exp/dune/app/users/$USER                                               
 mkdir FDEff (first time only)
 cd FDEff
 
@@ -85,7 +85,7 @@ git push
  Output: " $\color{#FF0000}{Output \textunderscore FDGeoEff.root}$ "    .
 
 ```
-cd /dune/app/users/<your_username>
+cd /exp/dune/app/users/$USER
 mkdir NDEff (first time only)
 cd NDEff
 git clone --recurse-submodules -b FD_Wei https://github.com/weishi10141993/DUNE_ND_GeoEff.git      # Get geoEff library
@@ -98,7 +98,7 @@ make -j geoEff                                                                  
 
 To (re)compile
 ```
-cd /dune/app/users/janelly/NDEff/DUNE_ND_GeoEff/    # In case you log out, need to source setup.sh to setup ROOT
+cd /exp/dune/app/users/$USER/NDEff/DUNE_ND_GeoEff/    # In case you log out, need to source setup.sh to setup ROOT
 source setup.sh         
 
 # Compile program
@@ -109,7 +109,7 @@ make runGeoEffFDEvtSim
 To (re)run program,
 ```
 cd ../bin
-./runGeoEffFDEvtSim /exp/dune/app/users/janelly/FDEff/srcs/myntuples/myntuples/MyEnergyAnalysis/myntuple.root
+./runGeoEffFDEvtSim /exp/dune/app/users/$USER/FDEff/srcs/myntuples/myntuples/MyEnergyAnalysis/myntuple.root
 ```
 This will produce a root output file containing throws and the hadron throw result. ($\color{#FF0000}{Output~file}$ : $\color{#FF0000}{Output \textunderscore FDGeoEff.root}$ ")
 
@@ -125,7 +125,7 @@ make -j geoEff
 The output root file from running ```runGeoEffFDEvtSim``` can be used to calculate FD event hadron containment efficiency by running:
 
 ```
-cd /dune/app/users/weishi/NDEff/DUNE_ND_GeoEff
+cd /exp/dune/app/users/weishi/NDEff/DUNE_ND_GeoEff
 source setup.sh
 cd app
 root -l -b -q FDEffCalc.C
@@ -145,7 +145,7 @@ echo 'gROOT->ProcessLine(".L ReadHadronHitNtuple.cpp"); ReadHadronHitNtuple_FD()
 
 First get the work env setup:
 ```
-cd /dune/app/users/janelly
+cd /exp/dune/app/users/$USER
 wget https://raw.githubusercontent.com/weishi10141993/NeutrinoPhysics/main/setupNDEff-grid.sh --no-check-certificate
 ```
 
